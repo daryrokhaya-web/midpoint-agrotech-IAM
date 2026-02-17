@@ -1,0 +1,6 @@
+EmpID,Prenom,Nom,Email,Fonction,Departement,Lieu
+A01,Jean,Dupont,j.dupont@agrotech.fr,Commercial,Sales,Paris
+A02,Sarah,Connor,s.connor@agrotech.fr,IT_Manager,IT,Vitry
+A03,Dorianne,Lavoine,m.lavoine@agrotech.fr,Directeur,Direction,Bordeaux
+A04,Amina,Diallo,r.diallo@agrotech.fr,Developpeur,IT,Normandie
+A05,Karim,gadji,k.gadji@agrotech.fr,Auditeur_Securite,Security,Paris
