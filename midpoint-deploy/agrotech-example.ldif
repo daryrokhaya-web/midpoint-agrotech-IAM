@@ -1,0 +1,44 @@
+dn: ou=agrotech,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: agrotech
+
+dn: ou=users,ou=agrotech,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: users
+
+dn: ou=groups,ou=agrotech,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: groups
+
+dn: cn=employees,ou=groups,ou=agrotech,dc=example,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: employees
+member: uid=admin,ou=system
+
+dn: cn=IT,ou=groups,ou=agrotech,dc=example,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: IT
+member: uid=admin,ou=system
+
+dn: cn=Sales,ou=groups,ou=agrotech,dc=example,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: Sales
+member: uid=admin,ou=system
+
+dn: cn=Security,ou=groups,ou=agrotech,dc=example,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: Security
+member: uid=admin,ou=system
+
+dn: cn=Direction,ou=groups,ou=agrotech,dc=example,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: Direction
+member: uid=admin,ou=system
