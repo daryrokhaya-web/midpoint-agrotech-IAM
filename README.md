@@ -8,5 +8,5 @@
 
 ---
 
-## 📝 Présentation du Projet
+##  Présentation du Projet
 Ce projet consiste à implémenter une gestion des identités et des accès (IAM) pour Agrotech Solutions. L'objectif est de centraliser la gestion des utilisateurs et d'automatiser le provisioning vers les systèmes cibles (LDAP, Odoo, PostgreSQL) afin de réduire les risques de sécurité.
