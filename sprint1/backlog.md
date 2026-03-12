@@ -14,9 +14,6 @@ Configurer le mapping inbound
 ### US-3
 Créer une tâche d’import automatique
 
-### US-4
-Tester l’import des utilisateurs
-
 ---
 
 ## Definition of Done (DoD)
