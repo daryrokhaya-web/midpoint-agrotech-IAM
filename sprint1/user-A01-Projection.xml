@@ -1,0 +1,104 @@
+<user xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" oid="8474820f-cf16-4294-a13a-e24852378aa6" version="9">
+    <_metadata id="1">
+        <storage>
+            <createTimestamp>2026-03-12T00:30:56.495Z</createTimestamp>
+            <creatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </creatorRef>
+            <createChannel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#import</createChannel>
+            <createTaskRef oid="5d30b9b3-363e-4488-8814-f037ee0e5598" relation="org:default" type="c:TaskType">
+                <!-- Import RH CSV -->
+            </createTaskRef>
+            <modifyTimestamp>2026-03-12T03:41:35.432Z</modifyTimestamp>
+            <modifierRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </modifierRef>
+            <modifyChannel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user</modifyChannel>
+        </storage>
+        <process>
+            <requestTimestamp>2026-03-12T00:30:56.295Z</requestTimestamp>
+            <requestorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </requestorRef>
+        </process>
+        <provisioning>
+            <lastProvisioningTimestamp>2026-03-12T03:41:35.432Z</lastProvisioningTimestamp>
+        </provisioning>
+    </_metadata>
+    <name>A01</name>
+    <operationExecution id="3">
+        <recordType>simple</recordType>
+        <timestamp>2026-03-12T03:00:29.594Z</timestamp>
+        <operation>
+            <objectDelta>
+                <t:changeType>add</t:changeType>
+                <t:objectType>c:ShadowType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>fatal_error</status>
+                <importance>normal</importance>
+                <token>1000000000000346134</token>
+                <message>Error adding LDAP entry uid=A01,ou=users,ou=agrotech,ou=system: objectClassViolation: OBJECT_CLASS_VIOLATION: failed for MessageType : ADD_REQUEST?Message ID : 5?    Add Request :?Entry?    dn: uid=A01,ou=users,ou=agrotech,ou=system?    objectClass: inetOrgPerson?    mail: j.dupont@agrotech.fr?    givenName: Jean?    sn: Dupont?: ERR_279 Required attributes [cn(2.5.4.3)] not found within entry uid=A01,ou=users,ou=agrotech,ou=system (65)</message>
+            </executionResult>
+            <objectName>uid=A01,ou=users,ou=agrotech,ou=system</objectName>
+            <resourceOid>ac58dcae-9abd-4b97-ba0c-547b2e86bc9a</resourceOid>
+            <resourceName>Annuaire LDAP</resourceName>
+            <shadowKind>account</shadowKind>
+            <shadowIntent>default</shadowIntent>
+        </operation>
+        <operation>
+            <objectDelta>
+                <t:changeType>modify</t:changeType>
+                <t:objectType>c:UserType</t:objectType>
+            </objectDelta>
+            <executionResult>
+                <operation>com.evolveum.midpoint.model.impl.lens.ChangeExecutor.executeDelta</operation>
+                <status>success</status>
+                <importance>normal</importance>
+                <token>1000000000000346135</token>
+            </executionResult>
+            <objectName>A01</objectName>
+        </operation>
+        <status>fatal_error</status>
+        <message>Error adding LDAP entry uid=A01,ou=users,ou=agrotech,ou=system: objectClassViolation: OBJECT_CLASS_VIOLATION: failed for MessageType : ADD_REQUEST?Message ID : 5?    Add Request :?Entry?    dn: uid=A01,ou=users,ou=agrotech,ou=system?    objectClass: inetOrgPerson?    mail: j.dupont@agrotech.fr?    givenName: Jean?    sn: Dupont?: ERR_279 Required attributes [cn(2.5.4.3)] not found within entry uid=A01,ou=users,ou=agrotech,ou=system (65)</message>
+        <initiatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+            <!-- administrator -->
+        </initiatorRef>
+        <channel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user</channel>
+    </operationExecution>
+    <iteration>0</iteration>
+    <iterationToken/>
+    <linkRef oid="0f380a88-09c8-440d-b6f9-da788d76c063" relation="org:default" type="c:ShadowType">
+        <!-- A01 -->
+    </linkRef>
+    <linkRef oid="e33ea3b7-7395-4f34-a2ca-a9ea9e63c755" relation="org:default" type="c:ShadowType">
+        <!-- uid=A01,ou=users,ou=agrotech,ou=system -->
+    </linkRef>
+    <activation>
+        <effectiveStatus>enabled</effectiveStatus>
+        <enableTimestamp>2026-03-12T00:30:56.295Z</enableTimestamp>
+    </activation>
+    <locality>Paris</locality>
+    <emailAddress>j.dupont@agrotech.fr</emailAddress>
+    <givenName>Jean</givenName>
+    <familyName>Dupont</familyName>
+    <title>Commercial</title>
+    <organizationalUnit>
+        <_value>Sales</_value>
+        <_metadata id="2">
+            <provenance>
+                <mappingSpecification>
+                    <definitionObjectRef oid="143c6279-7090-417a-a7a8-d60214851106" relation="org:default" type="c:ResourceType">
+                        <!-- Source RH Agrotech -->
+                    </definitionObjectRef>
+                    <objectType>
+                        <kind>account</kind>
+                        <intent>default</intent>
+                    </objectType>
+                    <mappingName>Departement</mappingName>
+                </mappingSpecification>
+            </provenance>
+        </_metadata>
+    </organizationalUnit>
+</user>
