@@ -1,0 +1,104 @@
+<role xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" oid="4407f39f-9c64-4640-95a0-34be2544960c" version="2">
+    <_metadata id="2">
+        <storage>
+            <createTimestamp>2026-03-12T22:25:04.330Z</createTimestamp>
+            <creatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </creatorRef>
+            <createChannel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user</createChannel>
+            <modifyTimestamp>2026-03-12T22:37:58.131Z</modifyTimestamp>
+            <modifierRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </modifierRef>
+            <modifyChannel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user</modifyChannel>
+        </storage>
+        <process>
+            <requestTimestamp>2026-03-12T22:25:04.182Z</requestTimestamp>
+            <requestorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </requestorRef>
+        </process>
+    </_metadata>
+    <name>Role_Admin_Odoo</name>
+    <assignment id="1">
+        <_metadata id="3">
+            <storage>
+                <createTimestamp>2026-03-12T22:25:04.330Z</createTimestamp>
+                <creatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                    <!-- administrator -->
+                </creatorRef>
+                <createChannel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user</createChannel>
+            </storage>
+            <process>
+                <requestTimestamp>2026-03-12T22:25:04.182Z</requestTimestamp>
+                <requestorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                    <!-- administrator -->
+                </requestorRef>
+            </process>
+            <provenance>
+                <acquisition id="4">
+                    <actorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                        <!-- administrator -->
+                    </actorRef>
+                    <channel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user</channel>
+                    <timestamp>2026-03-12T22:25:04.181Z</timestamp>
+                </acquisition>
+            </provenance>
+        </_metadata>
+        <targetRef oid="00000000-0000-0000-0000-000000000328" relation="org:default" type="c:ArchetypeType">
+            <!-- Application role -->
+        </targetRef>
+        <activation>
+            <effectiveStatus>enabled</effectiveStatus>
+        </activation>
+    </assignment>
+    <iteration>0</iteration>
+    <iterationToken/>
+    <archetypeRef oid="00000000-0000-0000-0000-000000000328" relation="org:default" type="c:ArchetypeType">
+        <!-- Application role -->
+    </archetypeRef>
+    <roleMembershipRef oid="00000000-0000-0000-0000-000000000328" relation="org:default" type="c:ArchetypeType">
+        <!-- Application role -->
+        <_metadata id="5">
+            <storage>
+                <createTimestamp>2026-03-12T22:25:04.288Z</createTimestamp>
+            </storage>
+            <provenance>
+                <assignmentPath>
+                    <sourceRef oid="4407f39f-9c64-4640-95a0-34be2544960c" relation="org:default" type="c:RoleType">
+                        <!-- Role_Admin_Odoo -->
+                    </sourceRef>
+                    <segment id="6">
+                        <segmentOrder>1</segmentOrder>
+                        <assignmentId>1</assignmentId>
+                        <targetRef oid="00000000-0000-0000-0000-000000000328" relation="org:default" type="c:ArchetypeType">
+                            <!-- Application role -->
+                        </targetRef>
+                        <matchingOrder>true</matchingOrder>
+                    </segment>
+                </assignmentPath>
+            </provenance>
+        </_metadata>
+    </roleMembershipRef>
+    <activation>
+        <effectiveStatus>enabled</effectiveStatus>
+        <enableTimestamp>2026-03-12T22:25:04.194Z</enableTimestamp>
+    </activation>
+    <inducement id="7">
+        <construction>
+            <resourceRef oid="17c7ff02-d523-4794-91e9-3c19fd9aab3b" relation="org:default" type="c:ResourceType">
+                <!-- Odoo Agrotech -->
+            </resourceRef>
+            <kind>account</kind>
+            <intent>default</intent>
+            <attribute id="8">
+                <ref>ri:share</ref>
+                <outbound>
+                    <expression>
+                        <value>false</value>
+                    </expression>
+                </outbound>
+            </attribute>
+        </construction>
+    </inducement>
+</role>

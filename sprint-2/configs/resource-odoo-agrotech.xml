@@ -1,0 +1,304 @@
+<resource xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" oid="17c7ff02-d523-4794-91e9-3c19fd9aab3b" version="89">
+    <_metadata id="1">
+        <storage>
+            <createTimestamp>2026-03-12T21:33:40.622Z</createTimestamp>
+            <creatorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </creatorRef>
+            <createChannel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user</createChannel>
+            <modifyTimestamp>2026-03-16T20:40:59.058Z</modifyTimestamp>
+            <modifierRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </modifierRef>
+            <modifyChannel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user</modifyChannel>
+        </storage>
+        <process>
+            <requestTimestamp>2026-03-12T21:33:40.573Z</requestTimestamp>
+            <requestorRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
+                <!-- administrator -->
+            </requestorRef>
+        </process>
+    </_metadata>
+    <name>Odoo Agrotech</name>
+    <lifecycleState>active</lifecycleState>
+    <operationalState>
+        <lastAvailabilityStatus>up</lastAvailabilityStatus>
+        <message>Status set to UP because resource schema was successfully fetched</message>
+        <timestamp>2026-03-16T20:55:03.420Z</timestamp>
+        <nodeId>DefaultNode</nodeId>
+    </operationalState>
+    <operationalStateHistory id="36">
+        <lastAvailabilityStatus>up</lastAvailabilityStatus>
+        <message>Status set to UP because resource schema was successfully fetched</message>
+        <timestamp>2026-03-16T20:55:03.420Z</timestamp>
+        <nodeId>DefaultNode</nodeId>
+    </operationalStateHistory>
+    <connectorRef oid="c3f0778e-fdcc-43b5-90dc-3ff5d1f46fb5" relation="org:default" type="c:ConnectorType">
+        <!-- ConnId org.identityconnectors.databasetable.DatabaseTableConnector v1.5.3.0 -->
+    </connectorRef>
+    <connectorConfiguration xmlns:icfc="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/connector-schema-3">
+        <icfc:configurationProperties xmlns:cfg="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-databasetable/org.identityconnectors.databasetable.DatabaseTableConnector">
+            <cfg:host>172.18.0.3</cfg:host>
+            <cfg:port>5432</cfg:port>
+            <cfg:user>odoo</cfg:user>
+            <cfg:password>
+                <t:encryptedData>
+                    <t:encryptionMethod>
+                        <t:algorithm xmlns="http://prism.evolveum.com/xml/ns/public/types-3">http://www.w3.org/2001/04/xmlenc#aes256-cbc</t:algorithm>
+                    </t:encryptionMethod>
+                    <t:keyInfo>
+                        <t:keyName>RuN2Rhuw5eyWVfVG8w4oVDYs5jc=</t:keyName>
+                    </t:keyInfo>
+                    <t:cipherData>
+                        <t:cipherValue>KXTAyFFO388iAmLgoJi+zyZwsjZJ2ip+zvGjhueuMIE=</t:cipherValue>
+                    </t:cipherData>
+                </t:encryptedData>
+            </cfg:password>
+            <cfg:database>agrotech</cfg:database>
+            <cfg:table>res_users</cfg:table>
+            <cfg:keyColumn>login</cfg:keyColumn>
+            <cfg:passwordColumn>password</cfg:passwordColumn>
+            <cfg:jdbcDriver>org.postgresql.Driver</cfg:jdbcDriver>
+            <cfg:jdbcUrlTemplate xmlns="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/bundle/com.evolveum.polygon.connector-databasetable/org.identityconnectors.databasetable.DatabaseTableConnector">jdbc:postgresql://172.18.0.3:5432/agrotech</cfg:jdbcUrlTemplate>
+        </icfc:configurationProperties>
+    </connectorConfiguration>
+    <schema>
+        <cachingMetadata>
+            <retrievalTimestamp>2026-03-16T20:55:03.419Z</retrievalTimestamp>
+            <serialNumber>d2c3c1da5f542656-b3ca5c44ee89271d</serialNumber>
+        </cachingMetadata>
+        <definition>
+            <xsd:schema xmlns:a="http://prism.evolveum.com/xml/ns/public/annotation-3" xmlns:ra="http://midpoint.evolveum.com/xml/ns/public/resource/annotation-3" xmlns:tns="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3">
+                <xsd:import namespace="http://prism.evolveum.com/xml/ns/public/annotation-3"/>
+                <xsd:import namespace="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3"/>
+                <xsd:import namespace="http://midpoint.evolveum.com/xml/ns/public/resource/annotation-3"/>
+                <xsd:complexType name="AccountObjectClass">
+                    <xsd:annotation>
+                        <xsd:appinfo>
+                            <a:container>true</a:container>
+                            <ra:resourceObject>true</ra:resourceObject>
+                            <ra:nativeObjectClass>__ACCOUNT__</ra:nativeObjectClass>
+                            <ra:default>true</ra:default>
+                            <ra:auxiliary>false</ra:auxiliary>
+                            <ra:embedded>false</ra:embedded>
+                            <ra:namingAttribute>icfs:name</ra:namingAttribute>
+                            <ra:displayNameAttribute>icfs:name</ra:displayNameAttribute>
+                            <ra:identifier>icfs:uid</ra:identifier>
+                            <ra:secondaryIdentifier>icfs:name</ra:secondaryIdentifier>
+                        </xsd:appinfo>
+                    </xsd:annotation>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="active" type="xsd:boolean">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>120</a:displayOrder>
+                                    <ra:frameworkAttributeName>active</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="write_uid" type="xsd:int">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>130</a:displayOrder>
+                                    <ra:frameworkAttributeName>write_uid</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="share" type="xsd:boolean">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>140</a:displayOrder>
+                                    <ra:frameworkAttributeName>share</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="signature" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>150</a:displayOrder>
+                                    <ra:frameworkAttributeName>signature</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="action_id" type="xsd:int">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>160</a:displayOrder>
+                                    <ra:frameworkAttributeName>action_id</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="create_date" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>170</a:displayOrder>
+                                    <ra:frameworkAttributeName>create_date</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="write_date" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>180</a:displayOrder>
+                                    <ra:frameworkAttributeName>write_date</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="create_uid" type="xsd:int">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>190</a:displayOrder>
+                                    <ra:frameworkAttributeName>create_uid</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element ref="icfs:name">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayName>ConnId Name</a:displayName>
+                                    <a:displayOrder>110</a:displayOrder>
+                                    <ra:frameworkAttributeName>__NAME__</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element name="id" type="xsd:int">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>200</a:displayOrder>
+                                    <ra:frameworkAttributeName>id</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="totp_secret" type="xsd:string">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>210</a:displayOrder>
+                                    <ra:frameworkAttributeName>totp_secret</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element name="company_id" type="xsd:int">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>220</a:displayOrder>
+                                    <ra:frameworkAttributeName>company_id</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element name="partner_id" type="xsd:int">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayOrder>230</a:displayOrder>
+                                    <ra:frameworkAttributeName>partner_id</ra:frameworkAttributeName>
+                                    <ra:returnedByDefault>true</ra:returnedByDefault>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" ref="icfs:uid">
+                            <xsd:annotation>
+                                <xsd:appinfo>
+                                    <a:displayName>ConnId UID</a:displayName>
+                                    <a:displayOrder>100</a:displayOrder>
+                                    <a:access>read</a:access>
+                                </xsd:appinfo>
+                            </xsd:annotation>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:schema>
+        </definition>
+    </schema>
+    <schemaHandling>
+        <objectType id="4">
+            <kind>account</kind>
+            <intent>default</intent>
+            <displayName>Odoo User</displayName>
+            <default>true</default>
+            <delineation>
+                <objectClass>ri:AccountObjectClass</objectClass>
+            </delineation>
+            <attribute id="6">
+                <ref>icfs:name</ref>
+                <outbound>
+                    <name>icfs-name</name>
+                    <strength>strong</strength>
+                    <source>
+                        <path>name</path>
+                    </source>
+                </outbound>
+            </attribute>
+            <attribute id="13">
+                <ref>ri:company_id</ref>
+                <outbound>
+                    <name>company_id</name>
+                    <strength>strong</strength>
+                    <expression>
+                        <value>1</value>
+                    </expression>
+                </outbound>
+            </attribute>
+            <attribute id="14">
+                <ref>ri:active</ref>
+                <outbound>
+                    <name>active</name>
+                    <strength>strong</strength>
+                    <expression>
+                        <value>true</value>
+                    </expression>
+                </outbound>
+            </attribute>
+            <attribute id="15">
+                <ref>ri:partner_id</ref>
+                <outbound>
+                    <name>partner_id</name>
+                    <strength>strong</strength>
+                    <expression>
+                        <value>3</value>
+                    </expression>
+                </outbound>
+            </attribute>
+        </objectType>
+    </schemaHandling>
+    <capabilities>
+        <cachingMetadata>
+            <retrievalTimestamp>2026-03-16T20:55:03.413Z</retrievalTimestamp>
+            <serialNumber>a06eb8b3047787cb-cca8dcd819cb5c0f</serialNumber>
+        </cachingMetadata>
+        <native xmlns:cap="http://midpoint.evolveum.com/xml/ns/public/resource/capabilities-3">
+            <cap:schema/>
+            <cap:discoverConfiguration/>
+            <cap:credentials>
+                <cap:password>
+                    <cap:returnedByDefault>false</cap:returnedByDefault>
+                </cap:password>
+            </cap:credentials>
+            <cap:liveSync/>
+            <cap:create/>
+            <cap:read>
+                <cap:returnDefaultAttributesOption>false</cap:returnDefaultAttributesOption>
+            </cap:read>
+            <cap:update>
+                <cap:addRemoveAttributeValues>true</cap:addRemoveAttributeValues>
+            </cap:update>
+            <cap:delete/>
+            <cap:testConnection/>
+            <cap:script>
+                <cap:host id="35">
+                    <cap:type>connector</cap:type>
+                </cap:host>
+            </cap:script>
+        </native>
+    </capabilities>
+</resource>
