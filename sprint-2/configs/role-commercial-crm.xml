@@ -1,4 +1,4 @@
-<role xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" oid="ddeda667-72f1-4177-a1b7-2d1c348d5b29" version="4">
+<role xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" oid="ddeda667-72f1-4177-a1b7-2d1c348d5b29" version="5">
     <_metadata id="2">
         <storage>
             <createTimestamp>2026-03-16T21:47:06.019Z</createTimestamp>
@@ -105,5 +105,22 @@
         <targetRef oid="979c6a9c-c34f-424d-a763-3269985cc308" relation="org:default" type="c:RoleType">
             <!-- Role_Employe_Odoo -->
         </targetRef>
+    </inducement>
+    <inducement id="10">
+        <construction>
+            <resourceRef oid="ac58dcae-9abd-4b97-ba0c-547b2e86bc9a" relation="org:default" type="c:ResourceType">
+                <!-- Annuaire LDAP -->
+            </resourceRef>
+            <kind>account</kind>
+            <intent>default</intent>
+            <association id="11">
+                <ref>ri:group</ref>
+                <outbound>
+                    <expression>
+                        <value>cn=Commerciaux,ou=groups,ou=agrotech,ou=system</value>
+                    </expression>
+                </outbound>
+            </association>
+        </construction>
     </inducement>
 </role>
