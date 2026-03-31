@@ -1,4 +1,4 @@
-<role xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" oid="d87ba4ab-1285-4dca-81f0-435d51312d83" version="1">
+<role xmlns="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:c="http://midpoint.evolveum.com/xml/ns/public/common/common-3" xmlns:icfs="http://midpoint.evolveum.com/xml/ns/public/connector/icf-1/resource-schema-3" xmlns:org="http://midpoint.evolveum.com/xml/ns/public/common/org-3" xmlns:q="http://prism.evolveum.com/xml/ns/public/query-3" xmlns:ri="http://midpoint.evolveum.com/xml/ns/public/resource/instance-3" xmlns:t="http://prism.evolveum.com/xml/ns/public/types-3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" oid="d87ba4ab-1285-4dca-81f0-435d51312d83" version="8">
     <_metadata id="2">
         <storage>
             <createTimestamp>2026-03-12T15:46:25.394Z</createTimestamp>
@@ -6,7 +6,7 @@
                 <!-- administrator -->
             </creatorRef>
             <createChannel>http://midpoint.evolveum.com/xml/ns/public/common/channels-3#user</createChannel>
-            <modifyTimestamp>2026-03-12T15:56:55.895Z</modifyTimestamp>
+            <modifyTimestamp>2026-03-12T17:58:11.398Z</modifyTimestamp>
             <modifierRef oid="00000000-0000-0000-0000-000000000002" relation="org:default" type="c:UserType">
                 <!-- administrator -->
             </modifierRef>
@@ -91,6 +91,21 @@
             </resourceRef>
             <kind>account</kind>
             <intent>default</intent>
+            <association id="8">
+                <ref>ri:group</ref>
+                <outbound>
+                    <expression>
+                        <value>cn=IT,ou=groups,ou=agrotech,ou=system</value>
+                    </expression>
+                </outbound>
+            </association>
         </construction>
+        <condition>
+            <expression>
+                <script>
+                    <code>user.organizationalUnit?.contains('IT')</code>
+                </script>
+            </expression>
+        </condition>
     </inducement>
 </role>
