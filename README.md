@@ -3,7 +3,7 @@
 # Agrotech Solutions - Projet IAM avec MidPoint
 **Formation :** Réseaux et Télécoms - Spécialité Cybersécurité (3ème année) 
 **Année Universitaire :** 2025-2026 
-**Équipe :** Rokhaya DARY (Scrum Master,Administratrice IAM -Midpoint), Kier DE CASTRO (Product Owner,Expert Systèmes), Soumaya MARBAH (Dev) 
+**Équipe :** Rokhaya DARY (Scrum Master,Administratrice IAM -Midpoint), Kier DE CASTRO (Product Owner,Expert Systèmes)
 **Encadrant :** Monsieur CHIBANI
 
 ---
